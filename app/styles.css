@@ -1,0 +1,184 @@
+:root {
+  --ink: #1c2b2b;
+  --muted: #5b6b6b;
+  --line: #dfe7e6;
+  --bg: #f6f8f7;
+  --panel: #ffffff;
+  --accent: #0b6e63;
+  --accent-dark: #084f47;
+  --red: #b3261e;
+  --soft: #e7f2ef;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 16px;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+.site-header {
+  background: var(--accent-dark);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
+.brand-mark { font-size: 26px; color: #ffd166; line-height: 1; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+.brand-text strong { font-size: 19px; letter-spacing: .2px; }
+.brand-text small { font-size: 12px; color: #cfe6e1; }
+.main-nav { display: flex; flex-wrap: wrap; gap: 2px; margin-left: auto; }
+.main-nav a {
+  color: #e8f3f0;
+  text-decoration: none;
+  padding: 7px 11px;
+  border-radius: 8px;
+  font-size: 14.5px;
+}
+.main-nav a:hover { background: rgba(255,255,255,.14); }
+.main-nav a.active { background: #fff; color: var(--accent-dark); font-weight: 600; }
+
+main { padding-bottom: 40px; }
+.page { animation: fade .25s ease; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+
+.hero { padding: 34px 0 8px; }
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 13.5px; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 10px; }
+.lede { font-size: 17.5px; color: var(--muted); max-width: 720px; margin: 0 0 8px; }
+.section-title { font-size: 21px; margin: 30px 0 12px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin: 14px 0;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.card-label { margin: 0 0 4px; font-size: 13px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.card-value { margin: 0; font-size: 30px; font-weight: 700; color: var(--accent-dark); line-height: 1.15; }
+.card-value span { font-size: 16px; font-weight: 600; color: var(--ink); }
+/* Nilai panjang (Rp22.139 triliun) tidak muat sebaris di kartu 4 kolom:
+   satuannya turun ke baris sendiri secara sengaja, bukan terpotong. */
+.card-value.stacked span { display: block; margin-top: 2px; }
+.card-note { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 12px 0 20px;
+}
+.panel h2 { margin-top: 0; }
+canvas { display: block; width: 100%; height: auto; }
+.chart-note { font-size: 13.5px; color: var(--muted); margin: 10px 0 0; }
+.source { font-size: 13.5px; color: var(--muted); margin: 12px 0 0; }
+.fact-list { margin: 14px 0 0; padding-left: 20px; }
+.fact-list li { margin: 4px 0; }
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+.tile {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.tile:hover { border-color: var(--accent); }
+.tile strong { display: block; font-size: 17px; color: var(--accent-dark); }
+.tile span { font-size: 14px; color: var(--muted); }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  align-items: end;
+  margin: 14px 0;
+}
+.toolbar label { font-size: 14px; font-weight: 600; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
+.toolbar select, .toolbar input[type="search"] {
+  font: inherit;
+  font-weight: 400;
+  color: var(--ink);
+  padding: 8px 10px;
+  border: 1px solid #b9c6c4;
+  border-radius: 8px;
+  background: #fff;
+  min-width: 200px;
+}
+.toolbar select:focus, .toolbar input[type="search"]:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.toggle { display: inline-flex; border: 1px solid #b9c6c4; border-radius: 8px; overflow: hidden; }
+.toggle button {
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 14px;
+  border: 0;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+.toggle button.active { background: var(--accent); color: #fff; font-weight: 600; }
+.toggle button:not(.active):hover { background: var(--soft); }
+
+.table-panel { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; }
+th { background: var(--soft); color: var(--accent-dark); font-size: 14px; white-space: nowrap; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]:hover { background: #d3e8e3; }
+th .sort-ind { font-size: 12px; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: #f2f7f6; }
+.table-meta { font-size: 13.5px; color: var(--muted); margin: 10px 0 0; }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: #eef2f1;
+  color: var(--muted);
+  font-size: 13.5px;
+  padding: 22px 0 30px;
+}
+.site-footer p { margin: 6px 0; }
+
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  h1 { font-size: 27px; }
+  .header-inner { gap: 8px; }
+  .main-nav { margin-left: 0; }
+  .main-nav a { padding: 6px 8px; font-size: 13.5px; }
+  .card-value { font-size: 25px; }
+  .panel { padding: 14px; }
+  .toolbar select, .toolbar input[type="search"] { min-width: 0; width: 100%; }
+  .toolbar label { width: 100%; }
+}

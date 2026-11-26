@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StatistikNusa — Portal Statistik Indonesia</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#/beranda">
+      <span class="brand-mark" aria-hidden="true">◈</span>
+      <span class="brand-text"><strong>StatistikNusa</strong><small>Portal Statistik Indonesia</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="#/beranda" data-nav="beranda">Beranda</a>
+      <a href="#/penduduk" data-nav="penduduk">Penduduk</a>
+      <a href="#/ekonomi" data-nav="ekonomi">Ekonomi</a>
+      <a href="#/kesehatan" data-nav="kesehatan">Kesehatan</a>
+      <a href="#/pendidikan" data-nav="pendidikan">Pendidikan</a>
+      <a href="#/ketenagakerjaan" data-nav="ketenagakerjaan">Ketenagakerjaan</a>
+      <a href="#/provinsi" data-nav="provinsi">Provinsi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ BERANDA ============ -->
+  <section class="page" id="page-beranda">
+    <div class="hero">
+      <p class="eyebrow">Data resmi · Diperbarui dari publikasi BPS dan Bank Dunia</p>
+      <h1>Indonesia dalam angka</h1>
+      <p class="lede">Gambaran ringkas penduduk, ekonomi, kesehatan, pendidikan, dan
+        ketenagakerjaan Indonesia — lengkap dengan sumber dan tahun setiap angka,
+        tanpa perlu mengunduh apa pun.</p>
+    </div>
+
+    <h2 class="section-title">Angka utama</h2>
+    <div class="cards">
+      <article class="card"><p class="card-label">Penduduk</p>
+        <p class="card-value">281,6 <span>juta jiwa</span></p>
+        <p class="card-note">Pertengahan 2024 · Sumber: BPS</p></article>
+      <article class="card"><p class="card-label">PDB (harga berlaku)</p>
+        <p class="card-value stacked">Rp22.139 <span>triliun</span></p>
+        <p class="card-note">Tahun 2024 · Sumber: BPS</p></article>
+      <article class="card"><p class="card-label">Pertumbuhan ekonomi</p>
+        <p class="card-value">5,03<span>%</span></p>
+        <p class="card-note">Tahun 2024 (y-on-y) · Sumber: BPS</p></article>
+      <article class="card"><p class="card-label">Pengangguran terbuka</p>
+        <p class="card-value">4,76<span>%</span></p>
+        <p class="card-note">Februari 2025 · Sumber: BPS</p></article>
+      <article class="card"><p class="card-label">Inflasi</p>
+        <p class="card-value">1,57<span>%</span></p>
+        <p class="card-note">Desember 2024 (y-on-y) · Sumber: BPS</p></article>
+      <article class="card"><p class="card-label">Harapan hidup</p>
+        <p class="card-value">74,1 <span>tahun</span></p>
+        <p class="card-note">Tahun 2024 · Sumber: BPS</p></article>
+    </div>
+
+    <h2 class="section-title">Tren pertumbuhan ekonomi 2019–2024</h2>
+    <div class="panel">
+      <canvas id="homeTrend" width="880" height="300" role="img"
+        aria-label="Grafik garis pertumbuhan PDB Indonesia 2019 sampai 2024"></canvas>
+      <p class="chart-note">Pertumbuhan PDB tahunan (%), 2019–2024. Sumber: BPS.</p>
+    </div>
+
+    <h2 class="section-title">Jelajahi datanya</h2>
+    <div class="tiles">
+      <a class="tile" href="#/penduduk"><strong>Penduduk</strong><span>Struktur umur dan sebaran penduduk</span></a>
+      <a class="tile" href="#/ekonomi"><strong>Ekonomi</strong><span>PDB menurut sektor dan tren tahunan</span></a>
+      <a class="tile" href="#/kesehatan"><strong>Kesehatan</strong><span>Harapan hidup, stunting, dan gizi</span></a>
+      <a class="tile" href="#/pendidikan"><strong>Pendidikan</strong><span>Melek huruf dan lama sekolah</span></a>
+      <a class="tile" href="#/ketenagakerjaan"><strong>Ketenagakerjaan</strong><span>Pengangguran dan pekerja informal</span></a>
+      <a class="tile" href="#/provinsi"><strong>Provinsi</strong><span>Sepuluh provinsi berpenduduk terbesar</span></a>
+    </div>
+  </section>
+
+  <!-- ============ PENDUDUK ============ -->
+  <section class="page" id="page-penduduk" hidden>
+    <h1>Penduduk</h1>
+    <p class="lede">Indonesia berpenduduk 281,6 juta jiwa pada pertengahan 2024 (BPS).
+      Sebagian besar penduduk berada pada usia produktif — inilah yang disebut
+      bonus demografi.</p>
+    <div class="cards">
+      <article class="card"><p class="card-label">Penduduk 2024</p>
+        <p class="card-value">281,6 <span>juta</span></p><p class="card-note">Sumber: BPS, 2024</p></article>
+      <article class="card"><p class="card-label">Laju pertumbuhan penduduk</p>
+        <p class="card-value">0,82<span>%</span></p><p class="card-note">Per tahun, 2023–2024 · Sumber: BPS</p></article>
+      <article class="card"><p class="card-label">Penduduk usia produktif (15–64)</p>
+        <p class="card-value">69,3<span>%</span></p><p class="card-note">Sumber: BPS, 2024</p></article>
+      <article class="card"><p class="card-label">Kepadatan penduduk</p>
+        <p class="card-value">147 <span>jiwa/km²</span></p><p class="card-note">Sumber: BPS, 2024</p></article>
+    </div>
+
+    <h2 class="section-title">Penduduk menurut kelompok umur, 2024</h2>
+    <div class="panel">
+      <canvas id="ageChart" width="880" height="320" role="img"
+        aria-label="Diagram batang penduduk menurut kelompok umur"></canvas>
+      <p class="chart-note">Pangsa penduduk per kelompok umur (%). Sumber: BPS, Proyeksi Penduduk 2024 (dibulatkan).</p>
+      <ul class="fact-list">
+        <li><strong>0–14 tahun:</strong> 24,1% — sekitar 67,9 juta jiwa</li>
+        <li><strong>15–64 tahun:</strong> 69,3% — sekitar 195,1 juta jiwa</li>
+        <li><strong>65 tahun ke atas:</strong> 6,6% — sekitar 18,6 juta jiwa</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2 class="section-title">Yang perlu diperhatikan</h2>
+      <p>Penduduk usia 65 tahun ke atas tumbuh paling cepat. Pada 2024, setiap 100
+        penduduk usia produktif menanggung sekitar 44 penduduk usia non-produktif
+        (rasio ketergantungan 44,3 — BPS, 2024).</p>
+      <p class="source">Sumber: BPS — Statistik Indonesia 2025 dan Proyeksi Penduduk 2024.</p>
+    </div>
+  </section>
+
+  <!-- ============ EKONOMI ============ -->
+  <section class="page" id="page-ekonomi" hidden>
+    <h1>Ekonomi</h1>
+    <p class="lede">PDB Indonesia 2024 mencapai Rp22.139 triliun dengan pertumbuhan 5,03%.
+      Industri pengolahan tetap menjadi penyumbang terbesar.</p>
+
+    <div class="toolbar" role="group" aria-label="Pengaturan tampilan ekonomi">
+      <label>Satuan PDB
+        <span class="toggle" id="gdpUnitToggle">
+          <button type="button" data-unit="idr" class="active" aria-pressed="true">Rp triliun</button>
+          <button type="button" data-unit="usd" aria-pressed="false">US$ miliar</button>
+        </span>
+      </label>
+    </div>
+
+    <div class="cards">
+      <article class="card"><p class="card-label">PDB 2024</p>
+        <p class="card-value stacked" id="gdpTotal">Rp22.139 <span>triliun</span></p>
+        <p class="card-note">Harga berlaku · Sumber: BPS, 2024</p></article>
+      <article class="card"><p class="card-label">PDB per kapita 2024</p>
+        <p class="card-value" id="gdpPerCapita">Rp78,6 <span>juta</span></p>
+        <p class="card-note">Sumber: BPS / Bank Dunia, 2024</p></article>
+      <article class="card"><p class="card-label">Pertumbuhan PDB 2024</p>
+        <p class="card-value">5,03<span>%</span></p>
+        <p class="card-note">y-on-y · Sumber: BPS, 2024</p></article>
+      <article class="card"><p class="card-label">Inflasi 2024</p>
+        <p class="card-value">1,57<span>%</span></p>
+        <p class="card-note">Desember, y-on-y · Sumber: BPS, 2024</p></article>
+    </div>
+
+    <h2 class="section-title">PDB menurut lapangan usaha, 2024</h2>
+    <div class="panel">
+      <canvas id="sectorChart" width="880" height="330" role="img"
+        aria-label="Diagram batang pangsa PDB menurut sektor"></canvas>
+      <p class="chart-note">Pangsa terhadap PDB (%). Sumber: BPS, 2024 (dibulatkan ke bilangan bulat).</p>
+    </div>
+
+    <h2 class="section-title">Tren tahunan 2019–2024</h2>
+    <div class="panel">
+      <div class="toolbar">
+        <label>Indikator
+          <select id="trendMetric">
+            <option value="growth">Pertumbuhan PDB (%)</option>
+            <option value="inflation">Inflasi (%, y-on-y)</option>
+            <option value="unemployment">Pengangguran terbuka (%, Agustus)</option>
+          </select>
+        </label>
+        <label>Tahun
+          <select id="trendYear">
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024" selected>2024</option>
+          </select>
+        </label>
+      </div>
+      <canvas id="trendChart" width="880" height="320" role="img"
+        aria-label="Grafik garis tren tahunan"></canvas>
+      <p class="chart-note" id="trendDetail">2024 — Pertumbuhan PDB: 5,03%. Sumber: BPS.</p>
+    </div>
+  </section>
+
+  <!-- ============ KESEHATAN ============ -->
+  <section class="page" id="page-kesehatan" hidden>
+    <h1>Kesehatan</h1>
+    <p class="lede">Harapan hidup penduduk Indonesia terus naik, tetapi stunting pada balita
+      masih menjadi pekerjaan rumah besar.</p>
+    <div class="cards">
+      <article class="card"><p class="card-label">Harapan hidup saat lahir</p>
+        <p class="card-value">74,1 <span>tahun</span></p><p class="card-note">Sumber: BPS, 2024</p></article>
+      <article class="card"><p class="card-label">Prevalensi stunting balita</p>
+        <p class="card-value">21,5<span>%</span></p><p class="card-note">Survei Status Gizi Indonesia, 2023</p></article>
+      <article class="card"><p class="card-label">Angka kematian bayi</p>
+        <p class="card-value">16,9 <span>per 1.000 kelahiran hidup</span></p><p class="card-note">Sumber: BPS, 2023</p></article>
+      <article class="card"><p class="card-label">Cakupan imunisasi dasar lengkap</p>
+        <p class="card-value">94,6<span>%</span></p><p class="card-note">Sumber: Kementerian Kesehatan, 2023</p></article>
+    </div>
+    <div class="panel">
+      <h2 class="section-title">Apa artinya angka-angka ini</h2>
+      <p>Harapan hidup 74,1 tahun berarti bayi yang lahir pada 2024 diperkirakan hidup
+        hingga usia tersebut bila kondisi kesehatan saat ini bertahan. Stunting 21,5%
+        berarti sekitar satu dari lima balita tumbuh lebih pendek dari standar usianya —
+        pemerintah menargetkan angka ini turun di bawah 14%.</p>
+      <p class="source">Sumber: BPS 2024; Survei Status Gizi Indonesia (SSGI) 2023;
+        Kementerian Kesehatan RI 2023.</p>
+    </div>
+  </section>
+
+  <!-- ============ PENDIDIKAN ============ -->
+  <section class="page" id="page-pendidikan" hidden>
+    <h1>Pendidikan</h1>
+    <p class="lede">Hampir seluruh penduduk usia 15 tahun ke atas kini bisa membaca dan
+      menulis, dan anak-anak Indonesia bersekolah lebih lama dari generasi sebelumnya.</p>
+    <div class="cards">
+      <article class="card"><p class="card-label">Angka melek huruf (15+)</p>
+        <p class="card-value">96,4<span>%</span></p><p class="card-note">Sumber: BPS, 2024</p></article>
+      <article class="card"><p class="card-label">Rata-rata lama sekolah</p>
+        <p class="card-value">9,0 <span>tahun</span></p><p class="card-note">Penduduk 25+ · Sumber: BPS, 2024</p></article>
+      <article class="card"><p class="card-label">Harapan lama sekolah</p>
+        <p class="card-value">13,2 <span>tahun</span></p><p class="card-note">Sumber: BPS, 2024</p></article>
+      <article class="card"><p class="card-label">Angka partisipasi murni SD</p>
+        <p class="card-value">97,9<span>%</span></p><p class="card-note">Sumber: BPS, 2023</p></article>
+    </div>
+    <div class="panel">
+      <h2 class="section-title">Membaca angka ini</h2>
+      <p>Rata-rata lama sekolah 9,0 tahun setara dengan tamat kelas 9 (SMP). Harapan lama
+        sekolah 13,2 tahun berarti anak usia 7 tahun saat ini diperkirakan bersekolah
+        hingga sekitar kelas 1 perguruan tinggi bila pola saat ini bertahan.</p>
+      <p class="source">Sumber: BPS — Indeks Pembangunan Manusia 2024 dan Statistik Pendidikan 2023.</p>
+    </div>
+  </section>
+
+  <!-- ============ KETENAGAKERJAAN ============ -->
+  <section class="page" id="page-ketenagakerjaan" hidden>
+    <h1>Ketenagakerjaan</h1>
+    <p class="lede">Dari 149,4 juta penduduk bekerja pada Februari 2025, hampir tiga dari lima
+      bekerja di sektor informal.</p>
+    <div class="cards">
+      <article class="card"><p class="card-label">Tingkat pengangguran terbuka</p>
+        <p class="card-value">4,76<span>%</span></p><p class="card-note">Februari 2025 · Sumber: BPS</p></article>
+      <article class="card"><p class="card-label">Penduduk bekerja</p>
+        <p class="card-value">149,4 <span>juta orang</span></p><p class="card-note">Februari 2025 · Sumber: BPS</p></article>
+      <article class="card"><p class="card-label">Pekerja informal</p>
+        <p class="card-value">59,4<span>%</span></p><p class="card-note">Dari penduduk bekerja · Sumber: BPS, Feb 2025</p></article>
+      <article class="card"><p class="card-label">Pekerja di sektor pertanian</p>
+        <p class="card-value">28,0<span>%</span></p><p class="card-note">Dari penduduk bekerja · Sumber: BPS, Feb 2025</p></article>
+    </div>
+    <div class="panel">
+      <h2 class="section-title">Pengangguran terbuka, Agustus 2019–2024 (%)</h2>
+      <canvas id="unempChart" width="880" height="300" role="img"
+        aria-label="Grafik garis pengangguran terbuka 2019 sampai 2024"></canvas>
+      <p class="chart-note">Tingkat pengangguran terbuka bulan Agustus tiap tahun. Puncak 7,07%
+        pada 2020 terjadi saat pandemi. Sumber: BPS.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROVINSI ============ -->
+  <section class="page" id="page-provinsi" hidden>
+    <h1>Provinsi</h1>
+    <p class="lede">Sepuluh provinsi berpenduduk terbesar, 2024. Jawa Barat, Jawa Timur, dan
+      Jawa Tengah bersama-sama menampung lebih dari 46% penduduk Indonesia.</p>
+
+    <div class="toolbar" role="group" aria-label="Pengaturan tabel provinsi">
+      <label>Cari provinsi
+        <input type="search" id="provSearch" placeholder="mis. Jawa Barat" autocomplete="off">
+      </label>
+      <label>Satuan penduduk
+        <span class="toggle" id="popUnitToggle">
+          <button type="button" data-unit="jt" class="active" aria-pressed="true">juta jiwa</button>
+          <button type="button" data-unit="rb" aria-pressed="false">ribu jiwa</button>
+        </span>
+      </label>
+    </div>
+
+    <div class="panel table-panel">
+      <table id="provTable">
+        <thead>
+          <tr>
+            <th data-sort="name" scope="col">Provinsi <span class="sort-ind"></span></th>
+            <th data-sort="pop" scope="col" class="num">Penduduk <span class="sort-ind"></span></th>
+            <th data-sort="area" scope="col" class="num">Luas (km²) <span class="sort-ind"></span></th>
+            <th data-sort="density" scope="col" class="num">Kepadatan (jiwa/km²) <span class="sort-ind"></span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p class="table-meta" id="provCount"></p>
+      <p class="source">Penduduk: BPS, Proyeksi Penduduk pertengahan 2024. Luas: BPS, Statistik
+        Indonesia 2024. Kepadatan dihitung dari penduduk dibagi luas wilayah.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>StatistikNusa</strong> — portal statistik demo yang berjalan sepenuhnya
+      dari berkas statis, tanpa permintaan jaringan.</p>
+    <p>Angka-angka di situs ini berasal dari publikasi Badan Pusat Statistik (BPS),
+      Kementerian Kesehatan RI, dan Bank Dunia; sebagian dibulatkan dan diberi label
+      sumber serta tahunnya. Situs ini bukan situs resmi BPS.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
